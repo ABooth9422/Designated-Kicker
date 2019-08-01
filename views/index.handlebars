@@ -1,32 +1,58 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+<div class="entirePage">
+
+
+
+<div class="header mb-1">
+  <h1 class="display-1"id="mainLogo1">Designated</h1>
+  <h1 class="display-1"id="mainLogo2">Kicker</h1>
+</div>
+<div class="bodyPage">
+<div id="nav">
+ 
+  <nav class="navbar navbar-expand-lg navbar-light mb-2" style="background-color:slategrey;">
+  <span class="navbar-brand badge badge-light" href="#">Designated Kicker</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+   
   </div>
+</nav>
+
+</div>
+
+<div class="main">
+    <div class="bodyContainer">
+    <div class="p-5 mx-1 rounded" id="scrollResults">
+      <h1 style="text-decoration:underline;text-shadow:black 10px 10px 10px;">Display Results</h1>
+    </div>
+    <div class="p-5 rounded"id="mainContent">
+      <div id="welcome">
+      <h1 class="display-3"style="text-shadow:black 10px 10px 10px;">Welcome to the Designated Kicker</h1>
+      <hr style="box-shadow:3px 3px 3px;color:whitesmoke;">
+      <br>
+      <p class="text-white mb-5"style="font-size:24px;text-shadow:black 10px 10px 10px;">In recent years, Kickstarter’s research has shown that as the role of innovation in our lives and society has expanded, people’s expectations for “the next big thing” has evolved. As always, Kickstarters must provide a reliable product and a rewarding customer experience. But now investors have many more reasons to question how much they trust your startup. Will it protect their data and privacy? Use automation responsibly? Tell the truth in this era of disinformation? In short: Can investors trust an innovator do the right thing?
+      <br>
+      <br>
+      Here at Designated Kicker, we alleviate all the stress of marketing your product or idea. We will work alongside you to market your worth in today’s competitive environment.
+      </p>
+      <button class="btn text-white" id="startBtn"style="background-color:slategray;box-shadow:white 3px 3px 3px">Click Here to begin our services</button>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+  <footer></footer>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
