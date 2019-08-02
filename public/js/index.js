@@ -17,6 +17,7 @@ $(document).ready(function() {
 function start() {
   $("#scrollResults").hide();
   $("#searchContent").hide();
+  $("#addItem").hide();
   $("#mainContent").css("background-color", "#0F3D57");
 }
 
@@ -27,6 +28,7 @@ function results() {
 function initialSearch() {
   $("#searchContent").hide();
   $("#scrollResults").show();
+  $("#addItem").show();
   $("#mainContent").css("background-color", "slategray");
 }
 

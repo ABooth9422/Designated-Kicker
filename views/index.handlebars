@@ -29,7 +29,7 @@
 
 </div>
 
-<div class="main">
+<div id="main">
     <div class="bodyContainer mb-5">
     <div class="p-5 mx-1 mb-5 rounded" id="scrollResults">
       <h1 style="text-decoration:underline;text-shadow:black 10px 10px 10px;">Display Results</h1>
@@ -44,7 +44,12 @@
       <br>
       Here at Designated Kicker, we alleviate all the stress of marketing your product or idea. We will work alongside you to market your worth in today’s competitive environment.
       </p>
+      
+      <div class="row">
+      <div class="col text-center">
       <button class="btn text-white" id="startBtn"style="background-color:slategray;box-shadow:white 3px 3px 3px">Click Here to begin our services</button>
+      </div>
+      </div>
       </div>
       <div class="p-5 mb-5 rounded" id="searchContent">
         <h1 class="display-3 text-center"style="text-shadow:black 10px 10px 10px;">Search your idea!</h1>
@@ -57,7 +62,7 @@
         <div class="input-group input-group-lg">
           <div class="col-lg-2">
             <div class="dropdown d-flex justify-content-right">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-secondary dropdown-toggle" style="box-shadow:white 3px 3px 3px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Chose Your Category
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -75,13 +80,66 @@
         </div>
         </div>
         </div>
+      <div id="addItem">
+        <h1 class="display-3 text-center"style="text-shadow:black 10px 10px 10px;">Time to add your product!</h1>
+         <hr style="box-shadow:3px 3px 3px;color:whitesmoke;">
+        <br>
+         <p class="text-white mb-5" style="font-size:24px;text-shadow:black 10px 10px 10px;">Now that you know whats out there we
+           can help you get started! For a small transaction fee we will assist with the creation and marketing of your product! Answer
+           the following questions below to add your product to Designated Kicker!
+         </p>
+         <form class="text-white font-weight-bold">
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputName">Name</label>
+      <input type="text" class="form-control" id="inputName" placeholder="Name of product">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputCategory">Category</label>
+      <input type="text" class="form-control" id="inputCategory" placeholder="Category of your product">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Blurb">Describe your product</label>
+    <input type="text" class="form-control" id="Blurb" placeholder="Description of your product">
+  </div>
+  <div class="form-group">
+    <label for="inputImage">Image Link</label>
+    <input type="text" class="form-control" id="inputImage" placeholder="url of your products image">
+  </div>
+  <div class="form-row mb-5">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" placeholder="City"class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+     <input type="text" placeholder="State"class="form-control" id="inputState">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputPledge">Pledge Goal</label>
+      <input type="text" placeholder="$$$$$$$$" class="form-control" id="inputPledge">
+    </div>
+  </div>
+    <div class="form-row">
+      <div class="col text-center">
+   <button class="btn btn-lg text-white" id="addProduct"style="background-color:#0F3D57;box-shadow:white 3px 3px 3px">Add Your Product!</button>
+   </div>
+   </div>
+</form>
+        {{!-- backers_count,blurb,category,country,location,name,pledged,slug,source_url,urls,usd_pledged --}}
+       
+      </div>
 
       </div>
   
    </div>
   </div>
 </div>
+    <footer>
+    {{>footerMain}}
+  </footer>
 </div>
-</div>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../public/js/index.js"></script>
