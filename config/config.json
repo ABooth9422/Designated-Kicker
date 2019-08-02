@@ -1,8 +1,13 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "root",
     "database": "kick_starter",
+=======
+    "password": "Wow0148407!",
+    "database": "exampledb",
+>>>>>>> 5ddd63c116d79a321ef796bf25fab12b569610d0
     "host": "localhost",
     "dialect": "mysql"
   },
