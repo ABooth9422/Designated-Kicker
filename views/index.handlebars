@@ -30,11 +30,11 @@
 </div>
 
 <div class="main">
-    <div class="bodyContainer">
-    <div class="p-5 mx-1 rounded" id="scrollResults">
+    <div class="bodyContainer mb-5">
+    <div class="p-5 mx-1 mb-5 rounded" id="scrollResults">
       <h1 style="text-decoration:underline;text-shadow:black 10px 10px 10px;">Display Results</h1>
     </div>
-    <div class="p-5 rounded"id="mainContent">
+    <div class="p-5 mb-5 rounded"id="mainContent">
       <div id="welcome">
       <h1 class="display-3"style="text-shadow:black 10px 10px 10px;">Welcome to the Designated Kicker</h1>
       <hr style="box-shadow:3px 3px 3px;color:whitesmoke;">
@@ -45,11 +45,39 @@
       Here at Designated Kicker, we alleviate all the stress of marketing your product or idea. We will work alongside you to market your worth in today’s competitive environment.
       </p>
       <button class="btn text-white" id="startBtn"style="background-color:slategray;box-shadow:white 3px 3px 3px">Click Here to begin our services</button>
-  </div>
+      </div>
+      <div class="p-5 mb-5 rounded" id="searchContent">
+        <h1 class="display-3 text-center"style="text-shadow:black 10px 10px 10px;">Search your idea!</h1>
+         <hr style="box-shadow:3px 3px 3px;color:whitesmoke;">
+        <br>
+        <p class="text-white mb-5" style="font-size:24px;text-shadow:black 10px 10px 10px;">Here we will search to see if theres anything that matches the product you want to create.
+          In the fields below please select a category from our dropdown menu and enter in the product name and description. Product name and description must be seperated by commas.
+        </p>
+        <div class="form-group row"></div>
+        <div class="input-group input-group-lg">
+          <div class="col-lg-2">
+            <div class="dropdown d-flex justify-content-right">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Chose Your Category
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#"></a>
+      <a class="dropdown-item" href="#"></a>
+      <a class="dropdown-item" href="#"></a>
+      </div>
+      </div>
+          </div>
+         <div class="col-lg-8">
+        <input type="text" placeholder="Search by your product name, description, commas must be used"style="width:100%;"class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        </div>
+        <div class="col-lg-2">
+         <button class="btn text-white" id="startSearch"style="background-color:slategray;box-shadow:white 3px 3px 3px">Click to Search</button>
+        </div>
+        </div>
+        </div>
+
+      </div>
   
-  <footer>
-    {{>footerMain}}
-  </footer>
    </div>
   </div>
 </div>

@@ -57,6 +57,7 @@ html, body
 {
     height: 100%;
     width: 100%;
+    position:relative;
 }
 #main{
   height:100%;
@@ -64,8 +65,10 @@ html, body
 }
 
 #footer{
-  position:absolute;
+  
   bottom:0;
+  position:fixed;
   width:100%;
-  padding:inherit;
+  height: 6rem;
+  padding-bottom: 2.5rem;
 }
