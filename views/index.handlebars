@@ -17,11 +17,14 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
       </li>
    
   </div>
@@ -61,16 +64,25 @@
         <div class="form-group row"></div>
         <div class="input-group input-group-lg">
           <div class="col-lg-2">
-            <div class="dropdown d-flex justify-content-right">
-      <button class="btn btn-secondary dropdown-toggle" style="box-shadow:white 3px 3px 3px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Chose Your Category
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      </div>
-      </div>
+          <div class="text-white d-flex justify-content-right"></h5>
+          <select class="custom-select" id="city">
+            <option selected>Chose your Category</option>
+            <option value="art">Art</option>
+            <option value="comics">Comics</option>
+            <option value="crafts">Crafts</option>
+            <option value="dance">Dance</option>
+            <option value="design">Design</option>
+            <option value="fashion">Fashion</option>
+            <option value="film & video">Film & Video</option>
+            <option value="food">Food</option>
+            <option value="journalism">Journalism</option>
+            <option value="music">Music</option>
+            <option value="photography">Photography</option>
+            <option value="publishing">Publishing</option>
+            <option value="theater">Theater</option>
+
+        </select>
+        </div>
           </div>
          <div class="col-lg-8">
         <input type="text" placeholder="Search by your product name, description, commas must be used"style="width:100%;"class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
