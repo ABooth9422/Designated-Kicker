@@ -95,3 +95,6 @@ html, body
 form{
   margin-bottom:100px;
 }
+.nav-link{
+  color:white !important;
+}
