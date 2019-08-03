@@ -1,3 +1,77 @@
-.list-group-item {
-  line-height: 2.5;
+body{
+  font-family: 'Crimson Pro', serif;
+  background-color:white;
+}
+.header{
+  background-image:url(../images/header.jpg);
+  height:400px;
+  background-position-y:-22px;
+  background-position-x:-50px;
+  box-shadow:3px 3px 3px;
+}
+h1{
+  color:whitesmoke
+}
+#mainLogo1{
+  position:absolute;
+  left:200px;
+  top:100px;
+  text-shadow:black 10px 10px 10px;
+}
+#mainLogo2{
+ position:absolute;
+ left:500px;
+ top:225px;
+ text-shadow:black 10px 10px 10px;
+ 
+}
+
+#nav{
+  box-shadow:3px 3px 3px 3px;
+}
+.bodyContainer{
+  position:absolute;
+	display: table;
+	width: 100%;
+  height: 100%;
+  border-spacing:10px 0px;
+}
+#scrollResults{
+  overflow-y: scroll;
+  height:100%;
+  background-color:#0F3D57;
+  box-shadow:3px 3px 3px 3px;
+  display: table-cell;
+	width: 25%;
+  vertical-align: top;
+  
+}
+#mainContent{
+  background-color:slategray;
+  height: 100%;
+  display: table-cell;
+	width: 75%;
+  vertical-align: top;
+  margin-left:25px;
+}
+html, body
+{
+    height: 100%;
+    width: 100%;
+    position:relative;
+}
+#main{
+  height:100%;
+  width:100%;
+}
+
+#footer{
+  bottom:0;
+  position:fixed;
+  width:100%;
+  height: 6rem;
+  padding-bottom: 2.5rem;
+}
+form{
+  margin-bottom:100px;
 }
