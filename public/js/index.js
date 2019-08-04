@@ -46,6 +46,8 @@ function initialSearch() {
 
 function contact() {
   event.preventDefault();
+  $("#itemAdded").hide();
+  $("#about").hide();
   $("#contact").show();
   $("#welcome").hide("fast");
   $("#scrollResults").hide();
@@ -56,6 +58,8 @@ function contact() {
 function about() {
   event.preventDefault();
   $("#about").show();
+  $("#contact").hide();
+  $("#itemAdded").hide();
   $("#welcome").hide("fast");
   $("#scrollResults").hide();
   $("#searchContent").hide("fast");
