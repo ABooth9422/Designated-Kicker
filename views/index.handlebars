@@ -21,10 +21,10 @@
         <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="about nav-link" href="#">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact Us</a>
+        <a class="contact nav-link" href="#">Contact Us</a>
       </li>
    
   </div>
@@ -140,6 +140,15 @@
    </div>
   </form>
         {{!-- backers_count,blurb,category,country,location,name,pledged,slug,source_url,urls,usd_pledged --}}
+      </div>
+      <div class="p-5 mb-5 rounded"id="itemAdded">
+          {{>added}}
+      </div>
+      <div class="p-5 mb-5 rounded"id="contact">
+          {{>contact}}
+      </div>
+      <div class="p-5 mb-5 rounded"id="about">
+          {{>about}}
       </div>
       </div>
    </div>
