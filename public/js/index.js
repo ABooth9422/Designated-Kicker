@@ -31,3 +31,4 @@ function initialSearch() {
   var stateObj = { location: "results" };
   history.pushState(stateObj, "page 3", "displayResults");
 }
+module.exports = results();
