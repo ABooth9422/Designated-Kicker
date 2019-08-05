@@ -9,8 +9,8 @@
 <div class="bodyPage">
 <div id="nav">
  
-  <nav class="navbar navbar-expand-lg navbar-light mb-2" style="background-color:slategrey;">
-  <span class="navbar-brand badge badge-light" href="#">Designated Kicker</span>
+  <nav class="navbar navbar-expand-lg navbar-light text-white mb-2" style="background-color:slategrey;">
+  <span class="navbar-brand badge badge-light"><img width="30" height="30"src="../public/images/Logo 2 - Large.png" alt=""></span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -21,10 +21,10 @@
         <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="about nav-link" href="#">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact Us</a>
+        <a class="contact nav-link" href="#">Contact Us</a>
       </li>
    
   </div>
@@ -85,8 +85,8 @@
         </div>
           </div>
          <div class="col-lg-8">
-        <input type="text" placeholder="Search by your product name, description, commas must be used"style="width:100%;"class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-        </div>
+        <input type="text" placeholder="Search by your product name, description, commas must be used"style="width:100%;"class="form-control" id="searchKeywords" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        </div> 
         <div class="col-lg-2">
          <button class="btn text-white" id="startSearch"style="background-color:slategray;box-shadow:white 3px 3px 3px">Click to Search</button>
         </div>
@@ -140,11 +140,17 @@
    </div>
   </form>
         {{!-- backers_count,blurb,category,country,location,name,pledged,slug,source_url,urls,usd_pledged --}}
-       
       </div>
-
+      <div class="p-5 mb-5 rounded"id="itemAdded">
+          {{>added}}
       </div>
-  
+      <div class="p-5 mb-5 rounded"id="contact">
+          {{>contact}}
+      </div>
+      <div class="p-5 mb-5 rounded"id="about">
+          {{>about}}
+      </div>
+      </div>
    </div>
   </div>
 </div>

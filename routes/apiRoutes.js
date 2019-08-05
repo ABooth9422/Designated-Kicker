@@ -3,12 +3,13 @@ var db = require("../models");
 module.exports = function(app) {
   app.post("/search", function(req, resp) {
     console.log("post here in apiRoutes");
-    console.log(resp.data);
+    console.log(req.body.cat);
+    var cat = req.body.cat;
     db.kickstarter
       .findAll(
         {
           where: {
-            category: resp
+            category: cat
           }
         },
         { raw: true }

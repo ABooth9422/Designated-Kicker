@@ -11,8 +11,17 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         notNull: true
       }
+    },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: true
+      }
     }
   });
+
+  kickstarter.sync();
 
   return kickstarter;
 };
