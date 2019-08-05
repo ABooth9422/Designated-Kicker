@@ -1,16 +1,18 @@
-document.getElementById('startSearch').onclick = function () {
-  let categoryInput = document.getElementById('city').value;
+$("#startSearch").on("click", function() {
+  var categoryInput = document.getElementById("categoryInput").value;
   var keywordInput = document.getElementById("searchKeywords").value;
+  getSearchResults(categoryInput, keywordInput);
+  console.log("Category Selected: " + categoryInput);
+  console.log("Keywords: " + keywordInput);
+});
 
-  console.log('Category Selected: ' + categoryInput);
-  console.log('Keywords: ' + keywordInput);
-};
-
-
-function getSearchResults() {
+function getSearchResults(categoryInput, keywordInput) {
   var queryURL =
     "https://www.googleapis.com/customsearch/v1?key=AIzaSyD-_9weq6nvkj3TD9WBn1h1FaJJQbu-CII&cx=017576662512468239146:omuauf_lfve&q=" +
-    categoryInput + "+kickstarter+projects";
+    categoryInput +
+    " " +
+    keywordInput +
+    "+kickstarter+projects";
 
   $.ajax({
     url: queryURL,
@@ -23,7 +25,4 @@ function getSearchResults() {
     $("#googleSearchFour").html(response.items[3].title);
     $("#googleSearchFive").html(response.items[4].title);
   });
-};
-
-
-getSearchResults();
+}
