@@ -2,6 +2,11 @@ body{
   font-family: 'Crimson Pro', serif;
   background-color:white;
 }
+.entirePage{
+  position:relative;
+  height:100%;
+  width:100%;
+}
 .header{
   background-image:url(../images/header.jpg);
   height:400px;
@@ -37,7 +42,7 @@ h1{
   border-spacing:10px 0px;
 }
 #scrollResults{
-  overflow-y: scroll;
+  
   height:100%;
   background-color:#0F3D57;
   box-shadow:3px 3px 3px 3px;
@@ -46,20 +51,20 @@ h1{
   vertical-align: top;
   
 }
-#scrollResults::-webkit-scrollbar-track
+body::-webkit-scrollbar-track
 {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
     background-color: slategrey;
 }
 
-#scrollResults::-webkit-scrollbar
+body::-webkit-scrollbar
 {
     width: 12px;
     background-color: slategrey;
 }
 
-#scrollResults::-webkit-scrollbar-thumb
+body::-webkit-scrollbar-thumb
 {
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
@@ -84,7 +89,7 @@ html, body
   width:100%;
 }
 
-#footer{
+footer{
   bottom:0;
   position:fixed;
   width:100%;
@@ -97,4 +102,21 @@ form{
 }
 .nav-link{
   color:white !important;
+}
+
+img#logoBadge:hover {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+img#logoBadge:hover {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
 }

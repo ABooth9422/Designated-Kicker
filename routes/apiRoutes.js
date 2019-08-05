@@ -5,19 +5,19 @@ module.exports = function(app) {
     console.log("post here in apiRoutes");
     console.log(req.body.cat);
     var cat = req.body.cat;
-    db.kickstarter
-      .findAll(
-        {
-          where: {
-            category: cat
-          }
-        },
-        { raw: true }
-      )
-      .then(function(data) {
-        console.log("callback data" + data);
-        resp.status(201).end();
-      });
+    // db.kickstarter
+    //   .findAll(
+    //     {
+    //       where: {
+    //         category: cat
+    //       }
+    //     },
+    //     { raw: true }
+    //   )
+    //   .then(function(data) {
+    //     console.log("callback data" + data);
+    //     resp.status(201).end();
+    //   });
   });
 
   // Get all examples

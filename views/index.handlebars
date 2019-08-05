@@ -10,7 +10,7 @@
 <div id="nav">
  
   <nav class="navbar navbar-expand-lg navbar-light text-white mb-2" style="background-color:slategrey;">
-  <span class="navbar-brand badge badge-light"><img width="30" height="30"src="../public/images/Logo 2 - Large.png" alt=""></span>
+  <span class="navbar-brand badge badge-light"><img width="30" id="logoBadge" height="30"src="../public/images/Logo 2 - Large.png" alt=""></span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -35,7 +35,10 @@
 <div id="main">
     <div class="bodyContainer mb-5">
     <div class="p-5 mx-1 mb-5 rounded" id="scrollResults">
-      <h1 style="text-decoration:underline;text-shadow:black 10px 10px 10px;">Display Results</h1>
+      <h1 class="mb-5"style="text-decoration:underline;text-shadow:black 10px 10px 10px;">Display Results</h1>
+      <div id="scrollContResults">
+
+      </div>
     </div>
     <div class="p-5 mb-5 rounded"id="mainContent">
       <div id="welcome">
@@ -65,7 +68,7 @@
         <div class="input-group input-group-lg">
           <div class="col-lg-2">
           <div class="text-white d-flex justify-content-right"></h5>
-          <select class="custom-select" id="city">
+          <select class="custom-select" id="categoryInput">
             <option selected>Chose your Category</option>
             <option value="art">Art</option>
             <option value="comics">Comics</option>
@@ -157,9 +160,9 @@
     <footer>
     {{>footerMain}}
   </footer>
+  
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../public/js/index.js"></script>
-<script src="../public/js/results.js"></script>
-
+<script src="../public/js/googlesearch.js"></script>

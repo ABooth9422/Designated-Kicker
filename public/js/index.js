@@ -30,10 +30,10 @@ function start() {
 }
 
 function results() {
-  $("#searchContent").show();
-  $("#welcome").hide("fast");
   var stateObj = { location: "search" };
   history.pushState(stateObj, "page 2", "startSearch");
+  $("#searchContent").show();
+  $("#welcome").hide("fast");
 }
 
 function initialSearch() {
