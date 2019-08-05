@@ -42,12 +42,11 @@ h1{
   border-spacing:10px 0px;
 }
 #scrollResults{
-  
   height:100%;
+  width:25%;
   background-color:#0F3D57;
   box-shadow:3px 3px 3px 3px;
   display: table-cell;
-	width: 25%;
   vertical-align: top;
   
 }
@@ -119,4 +118,14 @@ img#logoBadge:hover {
 @keyframes mover {
   0% { transform: translateY(0); }
   100% { transform: translateY(-5px); }
+}
+a:link{
+  color:white;
+}
+a:visited{
+  color:slategray;
+}
+hr{
+  box-shadow:3px 3px 3px;
+  color:whitesmoke;
 }

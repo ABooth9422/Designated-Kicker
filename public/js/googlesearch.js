@@ -25,8 +25,12 @@ function getSearchResults(categoryInput, keywordInput) {
     }
     resultArray.forEach(function(element) {
       var div = $("<div>");
-      div.addClass("row d-flex justify-content-center text-white my-3");
+      div.addClass("appendedRow");
+      div.addClass(
+        "row d-flex flex-wrap justify-content-center text-white my-3"
+      );
       var image = $("<img src= still image'>");
+      var hr = $("<hr>");
       image.attr("src", element.pagemap.cse_thumbnail[0].src);
       image.addClass("img-thumbnail");
       var content = $("<h5>");
@@ -35,7 +39,7 @@ function getSearchResults(categoryInput, keywordInput) {
       webLink.text(element.link);
       webLink.attr("href", element.link);
       webLink.attr("target", "_blank");
-      div.append(image, content, webLink);
+      div.append(image, content, webLink, hr);
 
       div.appendTo($("#scrollContResults"));
     });
