@@ -23,6 +23,7 @@ function results() {
   var stateObj = { location: "search" };
   history.pushState(stateObj, "page 2", "startSearch");
 }
+
 function initialSearch() {
   $("#searchContent").hide();
   $("#scrollResults").show();
