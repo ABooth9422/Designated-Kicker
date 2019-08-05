@@ -15,7 +15,10 @@ module.exports = function(app) {
   });
   // Load example page and pass in an example by id
   app.get("/startSearch", function(req, res) {
-    res.render("index");
+    var completed = {
+      startSearch: true
+    };
+    res.render("index", completed);
   });
   app.get("/displayResults", function(req, res) {
     res.render("index");
