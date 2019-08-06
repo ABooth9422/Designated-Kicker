@@ -4,7 +4,13 @@ $(document).ready(function() {
     results();
   });
   $("#startSearch").on("click", function() {
-    initialSearch();
+    var category = $("#categoryInput").val();
+    var description = $("#searchKeywords").val();
+    if (category === "" || description === "") {
+      return alert("Missing required fields to search");
+    } else {
+      initialSearch();
+    }
   });
   $(".about").on("click", function() {
     about();
@@ -13,7 +19,8 @@ $(document).ready(function() {
     contact();
   });
   $("#addProduct").on("click", function() {
-    addedProduct();
+    event.preventDefault();
+    formSubmit();
   });
 });
 
@@ -72,4 +79,27 @@ function addedProduct() {
   $("#scrollResults").hide();
   $("#addItem").hide("fast");
   $("#mainContent").css("background-color", "#0F3D57");
+}
+
+function formSubmit() {
+  var name = $("#inputName").val();
+  var category = $("#inputCategory").val();
+  var blurb = $("#blurb").val();
+  var inputImage = $("#inputImage").val();
+  var city = $("#inputCity").val();
+  var state = $("#inputState").val();
+  var pledge = $("#inputPledge").val();
+  if (
+    name === "" ||
+    category === "" ||
+    blurb === "" ||
+    inputImage === "" ||
+    city === "" ||
+    state === "" ||
+    pledge === ""
+  ) {
+    alert("Missing fields on the form are required");
+  } else {
+    addedProduct();
+  }
 }
