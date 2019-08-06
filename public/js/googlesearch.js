@@ -32,7 +32,7 @@ function getSearchResults(categoryInput, keywordInput) {
       var image = $("<img src= still image'>");
       var hr = $("<hr>");
       image.attr("src", element.pagemap.cse_thumbnail[0].src);
-      image.addClass("img-thumbnail");
+      image.addClass("img-thumbnail mb-2");
       var content = $("<h5>");
       content.text("Description: " + element.title);
       var webLink = $("<a>");
