@@ -11,9 +11,7 @@ function getSearchResults(categoryInput, keywordInput) {
     "https://www.googleapis.com/customsearch/v1?key=AIzaSyAWKVtPudQIR6t8cn8AxA_voG_IvPKfr20&cx=11624574961326826142:xd1gsah2vww&q=" +
     categoryInput +
     "+" +
-    keywordInput +
-    "+kickstarter+projects";
-
+    keywordInput;
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -31,7 +29,8 @@ function getSearchResults(categoryInput, keywordInput) {
       );
       var image = $("<img src= still image'>");
       var hr = $("<hr>");
-      image.attr("src", element.pagemap.cse_thumbnail[0].src);
+      image.attr("src", element.pagemap.cse_image[0].src);
+      image.attr("alt", keywordInput);
       image.addClass("img-thumbnail mb-2");
       var content = $("<h5>");
       content.text("Description: " + element.title);
@@ -40,7 +39,6 @@ function getSearchResults(categoryInput, keywordInput) {
       webLink.attr("href", element.link);
       webLink.attr("target", "_blank");
       div.append(image, content, webLink, hr);
-
       div.appendTo($("#scrollContResults"));
     });
   });
