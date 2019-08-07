@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 function searchResults() {
   console.log("within results");
-  var e = document.getElementById("city");
+  var e = document.getElementById("categoryInput");
   var result = e.options[e.selectedIndex].value;
   console.log(result);
   var category = {
