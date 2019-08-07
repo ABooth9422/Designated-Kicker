@@ -2,15 +2,15 @@
 
 
 
-<div class="header mb-1">
-  <h1 class="display-1"id="mainLogo1">Designated</h1>
-  <h1 class="display-1"id="mainLogo2">Kicker</h1>
-</div>
+<a href="/"><div class="header mb-1">
+  <h1 class="display-1 animated fadeInLeft"id="mainLogo1">Designated</h1>
+  <h1 class="display-1 animated fadeInLeft delay-1s"id="mainLogo2">Kicker</h1>
+</div></a>
 <div class="bodyPage">
 <div id="nav">
  
   <nav class="navbar navbar-expand-lg navbar-light text-white mb-2" style="background-color:slategrey;">
-  <span class="navbar-brand badge badge-light"><img width="30" id="logoBadge" height="30"src="../public/images/Logo 2 - Large.png" alt=""></span>
+  <span class="navbar-brand badge badge-light animated fadeIn delay-2s"><img width="30" id="logoBadge" height="30"src="../public/images/Logo 2 - Large.png" alt=""></span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -26,6 +26,13 @@
       <li class="nav-item">
         <a class="contact nav-link" href="#">Contact Us</a>
       </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="email" placeholder="Username" aria-label="Username">
+      <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
+      <button class="btn btn-dark my-2 mx-2 my-sm-0" id="clientLogin" type="submit">Client Login</button>
+      <button class="btn btn-dark my-2 mx-2 my-sm-0" id="register" type="submit">Register</button>
+      </form>
    
   </div>
 </nav>
@@ -62,7 +69,7 @@
          <hr style="box-shadow:3px 3px 3px;color:whitesmoke;">
         <br>
         <p class="text-white mb-5" style="font-size:24px;text-shadow:black 10px 10px 10px;">Here we will search to see if theres anything that matches the product you want to create.
-          In the fields below please select a category from our dropdown menu and enter in the product name and description. Product name and description must be seperated by commas.
+          In the fields below please select a category from our dropdown menu and enter in the product name and description. We require the product name and the description.
         </p>
         <div class="form-group row"></div>
         <div class="input-group input-group-lg">
@@ -88,7 +95,7 @@
         </div>
           </div>
          <div class="col-lg-8">
-        <input type="text" placeholder="Search by your product name, description, commas must be used"style="width:100%;"class="form-control" id="searchKeywords" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <input type="text" placeholder="Search by your product name, and description"style="width:100%;"class="form-control" id="searchKeywords" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
         </div> 
         <div class="col-lg-2">
          <button class="btn text-white" id="startSearch"style="background-color:slategray;box-shadow:white 3px 3px 3px">Click to Search</button>
