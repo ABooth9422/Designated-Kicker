@@ -19,9 +19,8 @@ function searchResults() {
   $.ajax("/search", {
     type: "POST",
     data: category
-  }).then(function(data) {
-    console.log(data);
-    location.reload();
+  }).then(function() {
+    console.log("results finished");
   });
 }
 
@@ -46,7 +45,7 @@ function addYourProduct() {
   $.ajax("/add", {
     type: "POST",
     data: fullData
-  }).then(function(data) {
+  }).then(function() {
     console.log(data);
   });
 }

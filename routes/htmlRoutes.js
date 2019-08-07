@@ -13,18 +13,18 @@ module.exports = function(app) {
       });
     });
   });
-  // Load example page and pass in an example by id
+  app.get("/contactUs", function(req, res) {
+    res.render("contactUs");
+  });
+  app.get("/aboutUs", function(req, res) {
+    res.render("aboutUs");
+  });
   app.get("/startSearch", function(req, res) {
-    var completed = {
-      startSearch: true
-    };
-    res.render("index", completed);
+    res.render("search");
   });
-  app.get("/displayResults", function(req, res) {
-    res.render("index");
+  app.get("/itemAdd", function(req, res) {
+    res.render("itemAdd");
   });
-
-  // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
   });
