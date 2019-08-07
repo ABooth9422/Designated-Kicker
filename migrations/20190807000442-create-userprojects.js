@@ -1,7 +1,9 @@
-'use strict';
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+"use strict";
 module.exports = {
-  up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Userprojects', {
+  up: function(queryInterface, Sequelize) {
+    return queryInterface.createTable("Userprojects", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -39,7 +41,7 @@ module.exports = {
       }
     });
   },
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Userprojects');
+  down: function(queryInterface, Sequelize) {
+    return queryInterface.dropTable("Userprojects");
   }
 };
