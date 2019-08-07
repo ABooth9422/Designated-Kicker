@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -17,7 +17,53 @@
 </head>
 
 <body>
-  {{{body}}}
-</body>
+  <div class="entirePage mb-5">
+  <a href="/"><div class="header mb-1">
+  <h1 class="display-1 animated fadeInLeft"id="mainLogo1">Designated</h1>
+  <h1 class="display-1 animated fadeInLeft delay-1s"id="mainLogo2">Kicker</h1>
+  </div></a>
+  <div class="bodyPage">
+  <div id="nav">
+ 
+  <nav class="navbar navbar-expand-lg navbar-light text-white mb-2" style="background-color:slategrey;">
+  <span class="navbar-brand badge badge-light animated fadeIn delay-2s"><img width="30" id="logoBadge" height="30"src="../public/images/Logo 2 - Large.png" alt=""></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="about nav-link" class="aboutUs"href="/aboutUs">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="contact nav-link" class="contactUs"href="/contactUs">Contact Us</a>
+      </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="email" id="emailInput"placeholder="email" aria-label="email">
+      <input class="form-control mr-sm-2" type="password"id="passwordInput" placeholder="Password" aria-label="Password">
+      <button class="btn btn-dark my-2 mx-2 my-sm-0" id="clientLogin" type="submit">Client Login</button>
+      <button class="btn btn-dark my-2 mx-2 my-sm-0" id="register" type="submit">Register</button>
+      </form>
+    </div>
+    </nav>
+    </div>
+    <div id="main">
+    <div class="bodyContainer mb-5">
+        {{{body}}}
+        </div>
+        </div>
+          <footer>
+        {{>footerMain}}
+        </footer>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../public/js/index.js"></script>
+        <script src="../public/js/googlesearch.js"></script>
+        <script src="../public/js/results.js"></script>
+        </body>
 
 </html>

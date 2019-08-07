@@ -1,9 +1,12 @@
 $(document).ready(function() {
   start();
   $("#startBtn").on("click", function() {
-    results();
+    $.get("/startSearch", function() {
+      console.log("successful");
+    });
   });
   $("#startSearch").on("click", function() {
+    console.log("clicked");
     var category = $("#categoryInput").val();
     var description = $("#searchKeywords").val();
     if (category === "" || description === "") {
@@ -19,8 +22,19 @@ $(document).ready(function() {
     contact();
   });
   $("#addProduct").on("click", function() {
-    event.preventDefault();
-    formSubmit();
+    $.get("/itemAdd", function() {
+      formSubmit();
+    });
+  });
+  $(".aboutUs").on("click", function() {
+    $.get("/aboutUs", function() {
+      console.log("aboutUS");
+    });
+  });
+  $(".contactUs").on("click", function() {
+    $.get("/aboutUs", function() {
+      console.log("aboutUS");
+    });
   });
 });
 
@@ -29,18 +43,8 @@ function start() {
   $("#scrollResults").hide();
   $("#about").hide();
   $("#contact").hide();
-  $("#searchContent").hide("fast");
   $("#addItem").hide("fast");
   $("#mainContent").css("background-color", "#0F3D57");
-  var stateObj = { location: "main" };
-  history.pushState(stateObj, "page 1", "main");
-}
-
-function results() {
-  var stateObj = { location: "search" };
-  history.pushState(stateObj, "page 2", "startSearch");
-  $("#searchContent").show();
-  $("#welcome").hide("fast");
 }
 
 function initialSearch() {
@@ -48,30 +52,12 @@ function initialSearch() {
   $("#scrollResults").show();
   $("#addItem").show();
   $("#mainContent").css("background-color", "slategray");
-  var stateObj = { location: "results" };
-  history.pushState(stateObj, "page 3", "displayResults");
 }
 
 function contact() {
-  event.preventDefault();
-  $("#itemAdded").hide();
-  $("#about").hide();
-  $("#contact").show();
-  $("#welcome").hide("fast");
-  $("#scrollResults").hide();
-  $("#searchContent").hide("fast");
-  $("#addItem").hide("fast");
   $("#mainContent").css("background-color", "#0F3D57");
 }
 function about() {
-  event.preventDefault();
-  $("#about").show();
-  $("#contact").hide();
-  $("#itemAdded").hide();
-  $("#welcome").hide("fast");
-  $("#scrollResults").hide();
-  $("#searchContent").hide("fast");
-  $("#addItem").hide("fast");
   $("#mainContent").css("background-color", "#0F3D57");
 }
 function addedProduct() {

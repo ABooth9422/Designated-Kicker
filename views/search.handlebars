@@ -1,0 +1,93 @@
+        <div class="p-5 mx-1 mb-5 rounded" id="scrollResults">
+      <h1 class="mb-5 text-center"style="text-decoration:underline;text-shadow:black 10px 10px 10px;">Display Results</h1>
+      <div id="scrollContResults">
+      </div>
+      </div>
+      <div class="p-5 mb-5 rounded"id="mainContent">
+          <div class="p-5 mb-5 rounded" id="searchContent">
+        <h1 class="display-3 text-center"style="text-shadow:black 10px 10px 10px;">Search your idea!</h1>
+         <hr style="box-shadow:3px 3px 3px;color:whitesmoke;">
+        <br>
+        <p class="text-white mb-5" style="font-size:24px;text-shadow:black 10px 10px 10px;">Here we will search to see if theres anything that matches the product you want to create.
+          In the fields below please select a category from our dropdown menu and enter in the product name and description. We require the product name and the description.
+        </p>
+        <div class="input-group input-group-lg">
+          <div class="col-lg-2">
+          <div class="text-white d-flex justify-content-right"></h5>
+          <select class="custom-select" id="categoryInput">
+            <option value=""selected>Chose your Category</option>
+            <option value="art">Art</option>
+            <option value="comics">Comics</option>
+            <option value="crafts">Crafts</option>
+            <option value="dance">Dance</option>
+            <option value="design">Design</option>
+            <option value="fashion">Fashion</option>
+            <option value="film & video">Film & Video</option>
+            <option value="food">Food</option>
+            <option value="games">Games</option>
+            <option value="journalism">Journalism</option>
+            <option value="music">Music</option>
+            <option value="photography">Photography</option>
+            <option value="publishing">Publishing</option>
+            <option value="theater">Theater</option>
+        </select>
+        </div>
+          </div>
+         <div class="col-lg-8">
+        <input type="text" placeholder="Search by your product name, and description"style="width:100%;"class="form-control" id="searchKeywords" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        </div> 
+        <div class="col-lg-2">
+         <button class="btn text-white" id="startSearch"style="background-color:slategray;box-shadow:white 3px 3px 3px">Click to Search</button>
+        </div>
+        </div>
+        </div>
+        <div id="addItem">
+        <h1 class="display-3 text-center"style="text-shadow:black 10px 10px 10px;">Time to add your product!</h1>
+         <hr style="box-shadow:3px 3px 3px;color:whitesmoke;">
+        <br>
+         <p class="text-white mb-5" style="font-size:24px;text-shadow:black 10px 10px 10px;">Now that you know whats out there we
+           can help you get started! For a small transaction fee we will assist with the creation and marketing of your product! Answer
+           the following questions below to add your product to Designated Kicker!
+         </p>
+         <form class="text-white font-weight-bold">
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputName">Name</label>
+      <input type="text" class="form-control" id="inputName" placeholder="Name of product">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputCategory">Category</label>
+      <input type="text" class="form-control" id="inputCategory" placeholder="Category of your product">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Blurb">Describe your product</label>
+    <input type="text" class="form-control" id="Blurb" placeholder="Description of your product">
+  </div>
+  <div class="form-group">
+    <label for="inputImage">Image Link</label>
+    <input type="text" class="form-control" id="inputImage" placeholder="url of your products image">
+  </div>
+  <div class="form-row mb-5">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" placeholder="City"class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+     <input type="text" placeholder="State"class="form-control" id="inputState">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputPledge">Pledge Goal</label>
+      <input type="text" placeholder="$$$$$$$$" class="form-control" id="inputPledge">
+    </div>
+  </div>
+    <div class="form-row">
+      <div class="col text-center">
+   <a class="btn btn-lg text-white" href="/itemAdd"role="button"id="addProduct"style="background-color:#0F3D57;box-shadow:white 3px 3px 3px">Add Your Product!</a>
+   </div>
+   </div>
+   </div>
+  </form>
+
+        
