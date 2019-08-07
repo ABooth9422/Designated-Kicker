@@ -42,6 +42,7 @@ function results() {
   $("#searchContent").show();
   $("#welcome").hide("fast");
 }
+
 function initialSearch() {
   $("#searchContent").hide("fast");
   $("#scrollResults").show();

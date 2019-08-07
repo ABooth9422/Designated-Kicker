@@ -5,7 +5,7 @@ module.exports = function(app) {
   var main = ["/", "/main"];
   main.forEach(function(path) {
     app.get(path, function(req, res) {
-      db.Example.findAll({}).then(function(dbExamples) {
+      db.kickstarterseed.findAll({}).then(function(dbExamples) {
         res.render("index", {
           msg: "Welcome!",
           examples: dbExamples
