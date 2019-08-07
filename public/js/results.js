@@ -3,6 +3,9 @@ $(document).ready(function() {
     console.log("clicked");
     searchResults();
   });
+  $("#addProduct").on("click", function() {
+    addYourProduct();
+  });
 });
 
 function searchResults() {
@@ -19,5 +22,31 @@ function searchResults() {
   }).then(function(data) {
     console.log(data);
     location.reload();
+  });
+}
+
+function addYourProduct() {
+  console.log("button pressed");
+  var name = $("#inputName").val();
+  var category = $("#inputCategory").val();
+  var blurb = $("#Blurb").val();
+  var inputImage = $("#inputImage").val();
+  var city = $("#inputCity").val();
+  var state = $("#inputState").val();
+  var pledge = $("#inputPledge").val();
+  var fullData = {
+    name: name,
+    category: category,
+    blurb: blurb,
+    image: inputImage,
+    city: city,
+    state: state,
+    pledge: pledge
+  };
+  $.ajax("/add", {
+    type: "POST",
+    data: fullData
+  }).then(function(data) {
+    console.log(data);
   });
 }

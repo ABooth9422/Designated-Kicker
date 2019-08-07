@@ -6,27 +6,46 @@
   </a>
 </p>
 
-> In recent years, Kickstarter’s research has shown that as the role of innovation in our lives and society has expanded, people’s expectations for “the next big thing” has evolved. As always, Kickstarters must provide a reliable product and a rewarding customer experience. But now investors have many more reasons to question how much they trust your startup. Will it protect their data and privacy? Use automation responsibly? Tell the truth in this era of disinformation? In short: Can investors trust an innovator do the right thing?
+##About
+We are driven by simple founding principles, including entrepreneurship, independence and the mandate that everyone is an account executive. Core to our culture are our values, which guide our behavior, support a client-centric approach, influence the way we work with each other, our clients and the community, and inspire great work. Excellence, curiosity and courage are very much at the heart of who we are and drive our continued evolution as a firm. They describe us at our very best and ensure we remain distinctive to our clients and to the industry.
+
+OUR MISSION is to provide public relations counsel and strategic communications services which enable our clients to build strong relationships, and to influence attitudes and behaviors in a complex world.
+
+##Screenshots
+Include logo/demo screenshot etc.
+
+##Frameworks
+>Animete.CSS
+>Bootstrap
+>Express.js
+>Handlebar.js
+>Node.js
+>MySQL
+>Sequelize
+>Heroku
+
+##Features
+>Submit your Kickstarter idea for counseltation!!
+>Compare your ideas to other succesful Designated kicker campaigns.
+>View campaigns that showcase our talents.
+>View recently added kickstarter campaigns with our custom search engines.
+
+##API Reference
+>Kickstarter Dataset
+>Google Custom Search
+
+##How to use?
+***1. On the Home page of the Designated Kicker site click "Click Here to begin our services" to begin submitting an idea.
+***2. Choose a category that best fits your product idead.
+***3. Search some of our kickstarter campaigns. 
+***4. Add your information and product idea into the available forms. 
+***5. Click Submit!!!
+***6.After succesfully submitting we suggest you go checkout our other Kickstarted Products and Testimonial page!!!
+
+##Credit
+
 
 ### 🏠 [Homepage](https://blooming-atoll-38469.herokuapp.com/)
-
-## Install
-
-```sh
-npm install
-```
-
-## Usage
-
-```sh
-npm run start
-```
-
-## Run tests
-
-```sh
-npm run test
-```
 
 ## Author
 

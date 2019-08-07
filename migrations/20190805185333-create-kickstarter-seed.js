@@ -1,7 +1,9 @@
-'use strict';
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+"use strict";
 module.exports = {
-  up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('kickstarterseeds', {
+  up: function(queryInterface, Sequelize) {
+    return queryInterface.createTable("kickstarterseeds", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -60,7 +62,7 @@ module.exports = {
       }
     });
   },
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('kickstarterseeds');
+  down: function(queryInterface, Sequelize) {
+    return queryInterface.dropTable("kickstarterseeds");
   }
 };
