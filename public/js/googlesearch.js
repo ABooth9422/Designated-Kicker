@@ -30,6 +30,8 @@ function getSearchResults(categoryInput, keywordInput) {
       var image = $("<img src= still image'>");
       var hr = $("<hr>");
       image.attr("src", element.pagemap.cse_image[0].src);
+      image.css("width", "400px");
+      image.css("height", "200px");
       image.attr("alt", keywordInput);
       image.addClass("img-thumbnail mb-2");
       var content = $("<h5>");

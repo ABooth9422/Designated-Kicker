@@ -1,0 +1,37 @@
+<div class="p-5 mb-5 rounded"id="mainContent">
+
+   <h1 class="display-3 text-center"style="text-shadow:black 10px 10px 10px;">Recently Added</h1>
+    <hr style="box-shadow:3px 3px 3px;color:whitesmoke;">
+    <p class="text-white text-center mb-2" style="font-size:24px;text-shadow:black 10px 10px 10px;">
+    Here is the products that just recently got added to our website!</p>
+    <br>   
+    <table class="table table-dark table-bordered table-striped">
+    <thead>
+        <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Backers</th>
+        <th scope="col">Pledged</th>
+        <th scope="col">Category</th>
+        <th scope="col">Source Url</th>
+        <th scope="col">Blurb</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+            {{#each test}}
+            <tr>
+            <td>{{this.project_name}}</td>
+            <td>{{this.category}}</td>
+            <td>{{this.pledge_goal}}</td>
+            <td>{{this.category}}</td>
+            <td><a href="{{this.image_link}}">{{this.image_link}}</a></td>
+            <td>{{this.product_description}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+        <div class="row">
+      <div class="col text-center">
+      <a class="btn text-white" href="/"id="back2home"style="background-color:gray;box-shadow:white 3px 3px 3px">Start Again</a>
+      </div>
+      </div>
+</div>
