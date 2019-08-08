@@ -8,7 +8,7 @@ $("#startSearch").on("click", function() {
 
 function getSearchResults(categoryInput, keywordInput) {
   var queryURL =
-    "https://www.googleapis.com/customsearch/v1?key=AIzaSyAWKVtPudQIR6t8cn8AxA_voG_IvPKfr20&cx=11624574961326826142:xd1gsah2vww&q=" +
+    "https://www.googleapis.com/customsearch/v1?key=AIzaSyC0dy_iWEa5aLoFzL1s6ILjvipcPwRNYz0&cx=013791775854691782139:83btdvy04wk&q=" +
     categoryInput +
     "+" +
     keywordInput;
