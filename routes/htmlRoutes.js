@@ -28,14 +28,14 @@ module.exports = function(app) {
     db.kickstarterseed
       .findAll({
         where: {
-          category: req.params.storage
-        },
-        limit: 15
+          category_name: req.params.storage
+        }
       })
       .then(function(data) {
         var hndlebarObj = {
           test: data
         };
+        console.log("console log here " + data);
         res.render("itemAdd", hndlebarObj);
       });
   });
