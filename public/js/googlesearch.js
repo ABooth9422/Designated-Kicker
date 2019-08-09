@@ -1,6 +1,9 @@
 $("#startSearch").on("click", function() {
   var categoryInput = document.getElementById("categoryInput").value;
   var keywordInput = document.getElementById("searchKeywords").value;
+  var storage = localStorage.getItem("categoryInput");
+  localStorage.setItem("categoryInput", categoryInput);
+  console.log(storage);
   getSearchResults(categoryInput, keywordInput);
   console.log("Category Selected: " + categoryInput);
   console.log("Keywords: " + keywordInput);
