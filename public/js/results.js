@@ -6,6 +6,12 @@ $(document).ready(function() {
   $("#addProduct").on("click", function() {
     addYourProduct();
   });
+  $("#clientLogin").on("click", function() {
+    clientLogin();
+  });
+  $("#register").on("click", function() {
+    clientRegister();
+  });
 });
 
 // function searchResults() {
@@ -44,6 +50,37 @@ function addYourProduct() {
   $.ajax("/add", {
     type: "POST",
     data: fullData
+  }).then(function() {
+    console.log(data);
+  });
+}
+function clientLogin() {
+  console.log("hey");
+  var email = $("#emailInput").val();
+  var password = $("#passwordInput").val();
+  var client = {
+    email: email,
+    password: password
+  };
+  $.ajax("/api/login", {
+    type: "POST",
+    data: client
+  }).then(function() {
+    console.log(data);
+  });
+}
+
+function clientRegister() {
+  console.log("client register going");
+  var email = $("#emailInput").val();
+  var password = $("#passwordInput").val();
+  var client = {
+    email: email,
+    password: password
+  };
+  $.ajax("api/signup", {
+    type: "POST",
+    data: client
   }).then(function() {
     console.log(data);
   });
