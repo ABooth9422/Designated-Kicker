@@ -88,7 +88,7 @@ function formSubmit() {
     name === "" ||
     category === "" ||
     blurb === "" ||
-    inputImage ==="" ||
+    inputImage === "" ||
     city === "" ||
     state === "" ||
     pledge === ""
