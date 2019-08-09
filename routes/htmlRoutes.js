@@ -1,5 +1,7 @@
 /* eslint-disable camelcase */
 var db = require("../models");
+// eslint-disable-next-line no-unused-vars
+var isAuthenticated = require("../config/isAuth");
 
 module.exports = function(app) {
   // Load index page
