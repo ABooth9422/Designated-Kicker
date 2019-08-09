@@ -39,7 +39,8 @@ function addYourProduct() {
     image: inputImage,
     city: city,
     state: state,
-    pledge: pledge
+    pledge: pledge,
+    storage: storage
   };
   $.ajax("/add", {
     type: "POST",

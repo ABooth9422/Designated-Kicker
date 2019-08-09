@@ -23,13 +23,12 @@ module.exports = function(app) {
   app.get("/startSearch", function(req, res) {
     res.render("search");
   });
-  app.get("/itemAdd", function(req, res) {
-    var storage = localStorage.getItem("categoryInput");
-    console.log(storage);
+  app.get("/itemAdd/:storage", function(req, res) {
+    console.log(req.params.storage);
     db.kickstarterseed
       .findAll({
         where: {
-          category: storage
+          category: req.params.storage
         },
         limit: 15
       })
