@@ -3,13 +3,6 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.post("/search", function(req, resp) {
-    console.log("post here in apiRoutes");
-    console.log(req.body.cat);
-    var cat = req.body.cat;
-    console.log(cat);
-  });
-
   app.post("/add", function(req, resp) {
     console.log("/add post route here");
     console.log(req.body.name);
