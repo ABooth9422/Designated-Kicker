@@ -25,7 +25,6 @@ function searchResults() {
 }
 
 function addYourProduct() {
-  console.log("button pressed");
   var name = $("#inputName").val();
   var category = $("#inputCategory").val();
   var blurb = $("#Blurb").val();
