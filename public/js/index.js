@@ -22,7 +22,9 @@ $(document).ready(function() {
     contact();
   });
   $("#addProduct").on("click", function() {
-    $.get("/itemAdd", function() {
+    var storage = localStorage.getItem("categoryInput");
+    console.log(storage);
+    $.get("/itemAdd/" + storage, function() {
       formSubmit();
     });
   });
