@@ -4,19 +4,73 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Crimson+Pro:400i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../public/images/Logo 2 - Large.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/Logo 2 - Large.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../public/images/Logo 2 - Large.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../public/images/Logo 2 - Large.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/Logo 2 - Large.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../public/images/Logo 2 - Large.png">
   <title>Designated Kicker</title>
 </head>
 
 <body>
+  <div class="modal fade text-white font-weight-bold" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Register For your account!</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="registerName" class="col-form-label">Name</label>
+            <input type="text" class="form-control" id="registerName">
+          </div>
+          <div class="form-group">
+            <label for="registerEmail" class="col-form-label">Email</label>
+            <input type="email" class="form-control" id="registerEmail">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade text-white font-weight-bold" tabindex="-1" id="stopModal"role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header">
+        <h2 class="modal-title modal-dialog-centered">MISSING REQUIRED FIELDS</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex justify-content-center">
+        <div container="fluid">
+        <div class="row my-2">
+          <h3>You are missing required fields on your form!</h3>
+        </div>
+        <div class="row d-flex mb-2 justify-content-center">
+          <img width="400" height="400"src="../../public/images/stop.jpg" alt="STOP">
+        </div>
+      </div>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    {{!-- data-toggle="modal" data-target="#exampleModal" --}}
+
   <div class="entirePage mb-5">
   <a href="/"><div class="header mb-1">
   <h1 class="display-1 animated fadeInLeft"id="mainLogo1">Designated</h1>
@@ -47,7 +101,7 @@
       <input class="form-control mr-sm-2" type="email" id="emailInput"placeholder="email" aria-label="email">
       <input class="form-control mr-sm-2" type="password"id="passwordInput" placeholder="Password" aria-label="Password">
       <button class="btn btn-dark my-2 mx-2 my-sm-0" id="clientLogin" type="submit">Client Login</button>
-      <button class="btn btn-dark my-2 mx-2 my-sm-0" id="register" type="submit">Register</button>
+      <button class="btn btn-dark my-2 mx-2 my-sm-0" id="register" data-target="#exampleModal" type="submit">Register</button>
       </form>
     </div>
     </nav>
@@ -60,7 +114,6 @@
           <footer>
         {{>footerMain}}
         </footer>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="../public/js/index.js"></script>
         <script src="../public/js/googlesearch.js"></script>
         <script src="../public/js/results.js"></script>

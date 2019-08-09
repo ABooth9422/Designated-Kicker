@@ -28,11 +28,15 @@ module.exports = function(app) {
   app.get("/itemAdd/:storage", function(req, res) {
     console.log(req.params.storage);
     db.kickstarterseed
-      .findAll({
-        where: {
-          category_name: req.params.storage
+      .findAll(
+        { limit: 15 },
+        {
+          where: {
+            category_name: req.params.storage
+          },
+          order: [["backers_count", "DESC"]]
         }
-      })
+      )
       .then(function(data) {
         var hndlebarObj = {
           test: data
@@ -42,7 +46,10 @@ module.exports = function(app) {
       });
   });
   app.get("/recent", function(req, res) {
-    db.Userprojects.findAll({ limit: 15 }).then(function(data) {
+    db.Userprojects.findAll({
+      limit: 15,
+      order: [["pledge_goal", "DESC"]]
+    }).then(function(data) {
       var hndlebarObj = {
         test: data
       };
