@@ -15,8 +15,7 @@ module.exports = function(app) {
       city: req.body.city,
       state: req.body.state,
       pledge_goal: req.body.pledge
-    }).then(function(data) {
-      console.log(data);
-    });
+      // eslint-disable-next-line no-empty-function
+    }).then(function() {});
   });
 };

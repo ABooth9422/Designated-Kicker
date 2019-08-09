@@ -1,28 +1,28 @@
 $(document).ready(function() {
   $("#startSearch").on("click", function() {
     console.log("clicked");
-    searchResults();
+    // searchResults();
   });
   $("#addProduct").on("click", function() {
     addYourProduct();
   });
 });
 
-function searchResults() {
-  console.log("within results");
-  var e = document.getElementById("categoryInput");
-  var result = e.options[e.selectedIndex].value;
-  console.log(result);
-  var category = {
-    cat: result
-  };
-  $.ajax("/search", {
-    type: "POST",
-    data: category
-  }).then(function() {
-    console.log("results finished");
-  });
-}
+// function searchResults() {
+//   console.log("within results");
+//   var e = document.getElementById("categoryInput");
+//   var result = e.options[e.selectedIndex].value;
+//   console.log(result);
+//   var category = {
+//     cat: result
+//   };
+//   $.ajax("/search", {
+//     type: "POST",
+//     data: category
+//   }).then(function() {
+//     console.log("results finished");
+//   });
+// }
 
 function addYourProduct() {
   var name = $("#inputName").val();
@@ -39,8 +39,7 @@ function addYourProduct() {
     image: inputImage,
     city: city,
     state: state,
-    pledge: pledge,
-    storage: storage
+    pledge: pledge
   };
   $.ajax("/add", {
     type: "POST",
