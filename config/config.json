@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Wow0148407!",
-    "database": "kickstarter",
+    "password": "ChocolateRain2019",
+    "database": "exampledb",
     "host": "localhost",
     "dialect": "mysql"
   },
