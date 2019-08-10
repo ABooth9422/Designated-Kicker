@@ -13,8 +13,19 @@ $(document).ready(function() {
   $("#register").on("click", function() {
     clientRegister();
   });
+  $("#clientLogout").on("click", function() {
+    clientLogout();
+  });
 });
 
+function clientLogout() {
+  $.ajax("/logout", {
+    type: "POST"
+  }).then(function() {
+    console.log("then was successful");
+    window.location.replace("/");
+  });
+}
 function addYourProduct() {
   var name = $("#inputName").val();
   var category = $("#inputCategory").val();
@@ -52,8 +63,6 @@ function clientLogin() {
     data: client
   }).then(function() {
     console.log("then was successful");
-    // var userName = "";
-    // var userName = email.substring(0, email.indexOf("@"));
     window.location.replace("/startSearch");
   });
 }
@@ -73,7 +82,7 @@ function clientRegister() {
     data: client
   }).then(function() {
     console.log("data");
-    window.location.replace("/startSearch/" + name);
+    window.location.replace("/startSearch");
   });
 }
 

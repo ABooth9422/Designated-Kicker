@@ -9,19 +9,13 @@ module.exports = function(app) {
   var main = ["/", "/main"];
   main.forEach(function(path) {
     app.get(path, function(req, res) {
-      db.kickstarterseed.findAll({}).then(function(dbExamples) {
-        res.render("index", {
-          msg: "Welcome!",
-          examples: dbExamples
-        });
+      db.kickstarterseed.findAll({}).then(function() {
+        var homepage = {
+          homepage: true
+        };
+        res.render("index", homepage);
       });
     });
-  });
-  app.get("/", function(req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/startSearch");
-    }
   });
   app.get("/contactUs", function(req, res) {
     res.render("contactUs");
@@ -29,8 +23,11 @@ module.exports = function(app) {
   app.get("/aboutUs", function(req, res) {
     res.render("aboutUs");
   });
-  app.get("/startSearch/:name", function(req, res) {
-    res.render("search", req.params.name);
+  app.get("/startSearch", function(req, res) {
+    var homepage = {
+      homepage: false
+    };
+    res.render("search", homepage);
   });
   app.get("/itemAdd/:storage", function(req, res) {
     console.log(req.params.storage);

@@ -22,6 +22,7 @@ module.exports = function(app) {
     })
       .then(function(data) {
         console.log("heres data" + data);
+        res.json("/startSearch");
       })
       .catch(function(err) {
         console.log(err);
@@ -30,6 +31,5 @@ module.exports = function(app) {
   });
   app.post("/logout", function(req, res) {
     req.logout();
-    res.redirect("/");
   });
 };
