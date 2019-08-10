@@ -15,32 +15,40 @@ OUR MISSION is to provide public relations counsel and strategic communications 
 Include logo/demo screenshot etc.
 
 ## Frameworks
->Animete.CSS
->Bootstrap
->Express.js
->Handlebar.js
->Node.js
->MySQL
->Sequelize
->Heroku
+<ul>
+<li>Animete.CSS</li>
+<li>Bootstrap</li>
+<li>Express.js</li>
+<li>Handlebar.js</li>
+<li>Node.js</li>
+<li>MySQL</li>
+<li>Sequelize</li>
+<li>Heroku</li>
+</ul>
 
 ## Features
->Submit your Kickstarter idea for counseltation!!
->Compare your ideas to other succesful Designated kicker campaigns.
->View campaigns that showcase our talents.
->View recently added kickstarter campaigns with our custom search engines.
+<ul>
+<li>Submit your Kickstarter idea for counseltation!!</li>
+<li>Compare your ideas to other succesful Designated kicker campaigns.</li>
+<li>View campaigns that showcase our talents.</li>
+<li>View recently added kickstarter campaigns with our custom search engines.</li>
+</ul>
 
 ## API Reference
->Kickstarter Dataset
->Google Custom Search
+<ul>
+<li>Kickstarter Dataset</li>
+<li>Google Custom Search</li>
+</ul>
 
 ## How to use?
-*** 1. On the Home page of the Designated Kicker site click "Click Here to begin our services" to begin submitting an idea.
-*** 2. Choose a category that best fits your product idead.
-*** 3. Search some of our kickstarter campaigns. 
-*** 4. Add your information and product idea into the available forms. 
-*** 5. Click Submit!!!
-*** 6.After succesfully submitting we suggest you go checkout our other Kickstarted Products and Testimonial page!!!
+<ol>
+<li>On the Home page of the Designated Kicker site click "Click Here to begin our services" to begin submitting an idea.</li>
+<li>Choose a category that best fits your product idead.</li>
+<li>Search some of our kickstarter campaigns. </li>
+<li>Add your information and product idea into the available forms. </li>
+<li>Click Submit!!!</li>
+<li>After succesfully submitting we suggest you go checkout our other Kickstarted Products and Testimonial page!!!</li>
+  </ol>
 
 ## Credit
 
@@ -48,18 +56,20 @@ Include logo/demo screenshot etc.
 ### 🏠 [Homepage](https://blooming-atoll-38469.herokuapp.com/)
 
 ## Author
-
-👤 **Aaron Booth Ellen Evans Justin Comforti Shakwan Williams**
-
-* Github: [@abooth9422 ellennewellevans JustinConforti swilliams2077](https://github.com/abooth9422 ellennewellevans JustinConforti swilliams2077)
+<ul>
+<li><a href="https://github.com/abooth9422">Aaron Booth</a></li>
+<li><a href="https://github.com/ellennewellevans">Ellen Evans</a></li>
+<li><a href="https://github.com/JustinConforti">Justin Comforti</a></li>
+<li><a href="https://github.com/swilliams2077">Shakwan Williams</a></li>
+</ul>
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ABooth9422/Project2/issues).
+Contributions, issues and feature requests are welcome!
+<br>Feel free to check our <a href="https://github.com/ABooth9422/Project2/issues">issues page</a>
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
