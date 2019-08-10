@@ -55,35 +55,3 @@ function contact() {
 function about() {
   $("#mainContent").css("background-color", "#0F3D57");
 }
-function addedProduct() {
-  event.preventDefault();
-  $("#itemAdded").show();
-  $("#scrollResults").hide();
-  $("#addItem").hide("fast");
-  $("#mainContent").css("background-color", "#0F3D57");
-  formSubmit();
-}
-
-function formSubmit() {
-  var name = $("#inputName").val();
-  var category = $("#inputCategory").val();
-  var blurb = $("#blurb").val();
-  var inputImage = $("#inputImage").val();
-  var city = $("#inputCity").val();
-  var state = $("#inputState").val();
-  var pledge = $("#inputPledge").val();
-  if (
-    name === "" ||
-    category === "" ||
-    blurb === "" ||
-    inputImage === "" ||
-    city === "" ||
-    state === "" ||
-    pledge === ""
-  ) {
-    $("#stopModal").modal("show");
-    return;
-  } else {
-    addedProduct();
-  }
-}
