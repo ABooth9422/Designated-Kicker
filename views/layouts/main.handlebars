@@ -102,15 +102,17 @@
       </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
+        {{#if homepage }}
         <div id="registerOne">
       <input class="form-control mr-sm-2" type="email" id="emailInput"placeholder="email" aria-label="email">
       <input class="form-control mr-sm-2" type="password"id="passwordInput" placeholder="Password" aria-label="Password">
       <input class="btn btn-dark my-2 mx-2" id="clientLogin" type="button" value="Client Login"></input>
       <input class="btn btn-dark my-2 mx-2 my-sm-0" data-toggle="modal" type="button" data-target="#exampleModal" value="Register"></input>
      </div>
+     {{else}}
      <div id="registerTwo">
-        <h1 class="mx-2" style="text-shadow:black 10px 10px 10px;">Welcome: {{this.name}}!<input class="btn btn-dark my-2 mx-2" id="clientLogout" type="button" value="Logout"></input></h1>
-
+        <h1 class="mx-2" style="text-shadow:black 10px 10px 10px;">Welcome: Ellen!<input class="btn btn-dark my-2 mx-2" id="clientLogout" type="button" value="Logout"></input></h1>
+       {{/if}}
        </div>
       </form>
     </div>

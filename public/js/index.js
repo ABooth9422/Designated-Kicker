@@ -1,6 +1,7 @@
 $(document).ready(function() {
   start();
   $("#startBtn").on("click", function() {
+    $("#registerTwo").show();
     $.get("/startSearch", function() {
       console.log("successful");
     });
@@ -44,6 +45,8 @@ function start() {
 }
 
 function initialSearch() {
+  $("#registerOne").hide();
+  $("#registerTwo").show();
   $("#searchContent").hide("fast");
   $("#scrollResults").show();
   $("#addItem").show();
