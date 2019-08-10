@@ -16,6 +16,12 @@ module.exports = function(app) {
       });
     });
   });
+  app.get("/", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/startSearch");
+    }
+  });
   app.get("/contactUs", function(req, res) {
     res.render("contactUs");
   });
@@ -28,15 +34,13 @@ module.exports = function(app) {
   app.get("/itemAdd/:storage", function(req, res) {
     console.log(req.params.storage);
     db.kickstarterseed
-      .findAll(
-        { limit: 15 },
-        {
-          where: {
-            category_name: req.params.storage
-          },
-          order: [["backers_count", "DESC"]]
-        }
-      )
+      .findAll({
+        where: {
+          parent_category: req.params.storage
+        },
+        limit: 15,
+        order: [["pledged", "DESC"]]
+      })
       .then(function(data) {
         var hndlebarObj = {
           test: data

@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Wow0148407!",
+    "password": "root",
     "database": "kickstarter",
     "host": "localhost",
     "dialect": "mysql"

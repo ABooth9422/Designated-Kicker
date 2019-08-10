@@ -34,6 +34,7 @@ $(document).ready(function() {
 });
 
 function start() {
+  $("#registerTwo").hide();
   $("#itemAdded").hide();
   $("#scrollResults").hide();
   $("#about").hide();

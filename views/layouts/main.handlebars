@@ -35,11 +35,15 @@
             <label for="registerEmail" class="col-form-label">Email</label>
             <input type="email" class="form-control" id="registerEmail">
           </div>
+           <div class="form-group">
+            <label for="registerPassword" class="col-form-label">Password</label>
+            <input type="password" class="form-control" id="registerPassword">
+          </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-dark">Register</button>
+        <button type="button" id="register" data-dismiss="modal" class="btn btn-dark">Register</button>
       </div>
     </div>
   </div>
@@ -98,10 +102,16 @@
       </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
+        <div id="registerOne">
       <input class="form-control mr-sm-2" type="email" id="emailInput"placeholder="email" aria-label="email">
       <input class="form-control mr-sm-2" type="password"id="passwordInput" placeholder="Password" aria-label="Password">
-      <button class="btn btn-dark my-2 mx-2 my-sm-0" id="clientLogin" type="submit">Client Login</button>
-      <button class="btn btn-dark my-2 mx-2 my-sm-0" id="register" data-target="#exampleModal" type="submit">Register</button>
+      <input class="btn btn-dark my-2 mx-2" id="clientLogin" type="button" value="Client Login"></input>
+      <input class="btn btn-dark my-2 mx-2 my-sm-0" data-toggle="modal" type="button" data-target="#exampleModal" value="Register"></input>
+     </div>
+     <div id="registerTwo">
+        <h1 class="mx-2" style="text-shadow:black 10px 10px 10px;">Welcome: {{this.name}}!<input class="btn btn-dark my-2 mx-2" id="clientLogout" type="button" value="Logout"></input></h1>
+
+       </div>
       </form>
     </div>
     </nav>

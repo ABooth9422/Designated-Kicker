@@ -1,18 +1,27 @@
+/* eslint-disable no-unused-vars */
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var isAuthenticated = require("../config/isAuth");
+
 //
 module.exports = function(app) {
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    res.json("/startSearch");
+    console.log("post route to login");
+    res.redirect("/startSearch");
   });
+
   app.post("/api/signup", function(req, res) {
-    console.log(req.body);
+    var handleObj = {
+      name: req.body.name
+    };
     db.User.create({
+      name: req.body.name,
       email: req.body.email,
       password: req.body.password
     })
-      .then(function() {
+      .then(function(data) {
+        console.log("heres data" + data);
         res.redirect(307, "/startSearch");
       })
       .catch(function(err) {
