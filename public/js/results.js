@@ -40,7 +40,7 @@ function addYourProduct() {
   });
 }
 function clientLogin() {
-  console.log("hey");
+  console.log("clientLogin button pushed");
   var email = $("#emailInput").val();
   var password = $("#passwordInput").val();
   var client = {
@@ -51,15 +51,17 @@ function clientLogin() {
     type: "POST",
     data: client
   }).then(function() {
-    console.log(data);
+    console.log("then was successful");
   });
 }
 
 function clientRegister() {
   console.log("client register going");
-  var email = $("#emailInput").val();
-  var password = $("#passwordInput").val();
+  var name = $("#registerName").val();
+  var email = $("#registerEmail").val();
+  var password = $("#registerPassword").val();
   var client = {
+    name: name,
     email: email,
     password: password
   };
@@ -67,7 +69,7 @@ function clientRegister() {
     type: "POST",
     data: client
   }).then(function() {
-    console.log(data);
+    console.log("data");
   });
 }
 
