@@ -52,6 +52,9 @@ function clientLogin() {
     data: client
   }).then(function() {
     console.log("then was successful");
+    // var userName = "";
+    // var userName = email.substring(0, email.indexOf("@"));
+    window.location.replace("/startSearch");
   });
 }
 
@@ -70,6 +73,7 @@ function clientRegister() {
     data: client
   }).then(function() {
     console.log("data");
+    window.location.replace("/startSearch/" + name);
   });
 }
 

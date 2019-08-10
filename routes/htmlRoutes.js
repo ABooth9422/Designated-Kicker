@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable camelcase */
 var db = require("../models");
 // eslint-disable-next-line no-unused-vars
@@ -28,8 +29,8 @@ module.exports = function(app) {
   app.get("/aboutUs", function(req, res) {
     res.render("aboutUs");
   });
-  app.get("/startSearch", function(req, res) {
-    res.render("search");
+  app.get("/startSearch/:name", function(req, res) {
+    res.render("search", req.params.name);
   });
   app.get("/itemAdd/:storage", function(req, res) {
     console.log(req.params.storage);

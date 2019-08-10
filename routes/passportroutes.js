@@ -8,7 +8,7 @@ var isAuthenticated = require("../config/isAuth");
 module.exports = function(app) {
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     console.log("post route to login");
-    res.redirect("/startSearch");
+    res.json("/startSearch");
   });
 
   app.post("/api/signup", function(req, res) {
@@ -22,7 +22,6 @@ module.exports = function(app) {
     })
       .then(function(data) {
         console.log("heres data" + data);
-        res.redirect(307, "/startSearch");
       })
       .catch(function(err) {
         console.log(err);
