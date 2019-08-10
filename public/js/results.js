@@ -1,10 +1,16 @@
+/* eslint-disable eqeqeq */
 $(document).ready(function() {
   $("#startSearch").on("click", function() {
     console.log("clicked");
     // searchResults();
   });
   $("#addProduct").on("click", function() {
-    addYourProduct();
+    formSubmit();
+    var storage = localStorage.getItem("categoryInput");
+    console.log(storage);
+    $.get("/itemAdd/" + storage, function() {
+      addYourProduct();
+    });
   });
   $("#clientLogin").on("click", function() {
     clientLogin();
@@ -13,22 +19,6 @@ $(document).ready(function() {
     clientRegister();
   });
 });
-
-// function searchResults() {
-//   console.log("within results");
-//   var e = document.getElementById("categoryInput");
-//   var result = e.options[e.selectedIndex].value;
-//   console.log(result);
-//   var category = {
-//     cat: result
-//   };
-//   $.ajax("/search", {
-//     type: "POST",
-//     data: category
-//   }).then(function() {
-//     console.log("results finished");
-//   });
-// }
 
 function addYourProduct() {
   var name = $("#inputName").val();
@@ -84,4 +74,28 @@ function clientRegister() {
   }).then(function() {
     console.log(data);
   });
+}
+
+function formSubmit() {
+  var name = $("#inputName").val();
+  var category = $("#inputCategory").val();
+  var blurb = $("#blurb").val();
+  var inputImage = $("#inputImage").val();
+  var city = $("#inputCity").val();
+  var state = $("#inputState").val();
+  var pledge = $("#inputPledge").val();
+  if (
+    name === "" ||
+    category === "" ||
+    blurb === "" ||
+    inputImage === "" ||
+    city === "" ||
+    state === "" ||
+    pledge === ""
+  ) {
+    $("#stopModal").modal("show");
+  } else {
+    $("#mainContent").css("background-color", "#0F3D57");
+    addYourProduct();
+  }
 }

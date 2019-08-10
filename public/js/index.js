@@ -10,7 +10,7 @@ $(document).ready(function() {
     var category = $("#categoryInput").val();
     var description = $("#searchKeywords").val();
     if (category === "" || description === "") {
-      return alert("Missing required fields to search");
+      $("#stopModal").modal("show");
     } else {
       initialSearch();
     }
@@ -20,13 +20,6 @@ $(document).ready(function() {
   });
   $(".contact").on("click", function() {
     contact();
-  });
-  $("#addProduct").on("click", function() {
-    var storage = localStorage.getItem("categoryInput");
-    console.log(storage);
-    $.get("/itemAdd/" + storage, function() {
-      formSubmit();
-    });
   });
   $(".aboutUs").on("click", function() {
     $.get("/aboutUs", function() {
@@ -68,6 +61,7 @@ function addedProduct() {
   $("#scrollResults").hide();
   $("#addItem").hide("fast");
   $("#mainContent").css("background-color", "#0F3D57");
+  formSubmit();
 }
 
 function formSubmit() {
@@ -87,7 +81,8 @@ function formSubmit() {
     state === "" ||
     pledge === ""
   ) {
-    alert("Missing fields on the form are required");
+    $("#stopModal").modal("show");
+    return;
   } else {
     addedProduct();
   }
