@@ -4,7 +4,7 @@ $("#startSearch").on("click", function() {
   var storage = localStorage.getItem("categoryInput");
   localStorage.setItem("categoryInput", categoryInput);
   console.log(storage);
-  $("#addProduct").attr("href", "/itemAdd/" + categoryInput);
+  //$("#addProduct").attr("href", "/itemAdd/" + categoryInput);
   getSearchResults(categoryInput, keywordInput);
   console.log("Category Selected: " + categoryInput);
   console.log("Keywords: " + keywordInput);

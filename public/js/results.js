@@ -6,11 +6,6 @@ $(document).ready(function() {
   });
   $("#addProduct").on("click", function() {
     formSubmit();
-    var storage = localStorage.getItem("categoryInput");
-    console.log(storage);
-    $.get("/itemAdd/" + storage, function() {
-      addYourProduct();
-    });
   });
   $("#clientLogin").on("click", function() {
     clientLogin();
@@ -96,6 +91,11 @@ function formSubmit() {
     $("#stopModal").modal("show");
   } else {
     $("#mainContent").css("background-color", "#0F3D57");
-    addYourProduct();
+    var storage = localStorage.getItem("categoryInput");
+    console.log(storage + "storage");
+    $.get("/itemAdd/" + storage, function() {
+      location.href = "/itemAdd/" + storage;
+      addYourProduct();
+    });
   }
 }
